@@ -13,7 +13,7 @@ export default {
     name: "IndexPage",
     data() {
         return {
-            pages: ["Starships", "Films", "People"]
+            pages: ["Starships", "Films", "Planets"]
         };
     },
     components: { HomeCard }

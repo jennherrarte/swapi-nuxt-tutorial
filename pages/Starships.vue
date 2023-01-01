@@ -1,19 +1,16 @@
 <!-- Please remove this file from your project -->
 <template>
   <section>
-  <div v-for="(starship, index) in starships" :key="index">
-    <h1 class="hello">hello</h1>
-    <p>Name: {{ starship.name }}</p>
-    <p>Model: {{ starship.model }}</p>
-    <p>Starship Class: {{ starship.starship_class }}</p>
-    <p>Hyperdrive Rating: {{ starship.hyperdrive_rating }}</p>
-    <p>Cargo Capacity: {{ starship.cargo_capacity }}</p>
-    <p>notes</p>
-  </div>
+    <Header />
+    <NavBar />
+    <Card :starships="starships" />
 </section>
 </template>
 
 <script>
+import NavBar from '.././components/NavBar.vue';
+import Header from '.././components/Header.vue';
+
 export default {
   data() {
     return {
@@ -30,7 +27,8 @@ export default {
       console.log(this.starships)
       return this.starships;
     }
-  }
+  },
+  components: { NavBar, Header }
 }
 </script>
 

@@ -1,41 +1,36 @@
-<!-- Please remove this file from your project -->
+
 <template>
   <section>
-  <div v-for="(starship, index) in starships" :key="index">
-    <h1 class="hello">hello</h1>
-    <p>Name: {{ starship.name }}</p>
-    <p>Model: {{ starship.model }}</p>
-    <p>Starship Class: {{ starship.starship_class }}</p>
-    <p>Hyperdrive Rating: {{ starship.hyperdrive_rating }}</p>
-    <p>Cargo Capacity: {{ starship.cargo_capacity }}</p>
-    <p>notes</p>
-  </div>
-</section>
+    <Header />
+    <NavBar />
+    <Card :films="films" />
+  </section>
 </template>
 
 <script>
+import NavBar from '.././components/NavBar.vue';
+import Header from '.././components/Header.vue';
+
 export default {
   data() {
     return {
-      starships: [] 
-    }
+      films: []
+    };
   },
   mounted() {
-    this.getStarships()
+    this.getFilms();
   },
   methods: {
-    async getStarships() {
-      const res = await this.$axios.$get('/starships')
-      this.starships = res.results
-      console.log(this.starships)
-      return this.starships;
+    async getFilms() {
+      const res = await this.$axios.$get("/films");
+      this.films = res.results;
+      return this.films;
     }
-  }
+  },
+  components: { NavBar, Header }
 }
 </script>
 
 <style>
-.hello {
-  color: red;
-}
+
 </style>
