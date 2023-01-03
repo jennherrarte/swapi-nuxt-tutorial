@@ -1,3 +1,5 @@
+import postcssPresetEnv from 'postcss-preset-env'
+
 export default {
   // Disable server-side rendering: https://go.nuxtjs.dev/ssr-mode
   ssr: false,
@@ -18,9 +20,32 @@ export default {
       { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }
     ]
   },
+  
+  postcss: {
+    plugins: [
+      postcssPresetEnv({
+        stage: 0,
+        browsers: 'cover 90%, last 2 major versions'
+      })
+    ]
+  },
+
+  styleResources: {
+    scss: [
+      '~/assets/styles/includes/_config.scss',
+      '~/assets/styles/includes/_breakpoints.scss',
+      '~/assets/styles/includes/_mixins.scss',
+      '~/assets/styles/includes/_z-layers.scss',
+      '~/assets/styles/includes/_fonts.scss',
+      '~/assets/styles/includes/_typography.scss',
+      '~/assets/styles/includes/_colors.scss',
+      '~/assets/styles/includes/_forms.scss'
+    ]
+  },
 
   // Global CSS: https://go.nuxtjs.dev/config-css
   css: [
+    '~/assets/styles/app.scss',
   ],
 
   // Plugins to run before rendering page: https://go.nuxtjs.dev/config-plugins
