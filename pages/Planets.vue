@@ -3,7 +3,14 @@
   <section>
     <Header />
     <NavBar />
-    <Card :planets="planets" />
+
+    <DynamicCard title="Planets" endpoint="/planets" v-slot="{ item }">
+      <h2>
+        {{ item.name }}
+      </h2>
+
+      Planets specific data...
+    </DynamicCard>
   </section>
 </template>
 
