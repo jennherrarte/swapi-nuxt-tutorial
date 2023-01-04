@@ -9,7 +9,11 @@
         {{ item.title }}
       </h2>
 
-      Films specific data...
+      <p>title: {{ item.title }}</p>
+      <p>produced by: {{ item.producer }}</p>
+      <p>directed by: {{ item.director }}</p>
+      <p>episode: {{ item.episode_id }}</p>
+      <p>release date: {{ item.release_date }}</p>
     </DynamicCard>
   </section>
 </template>

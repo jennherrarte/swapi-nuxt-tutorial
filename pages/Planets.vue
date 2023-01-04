@@ -9,7 +9,11 @@
         {{ item.name }}
       </h2>
 
-      Planets specific data...
+      <p>name: {{ item.name }}</p>
+      <p>diameter: {{ item.diameter }}</p>
+      <p>population: {{ item.population }}</p>
+      <p>climate: {{ item.climate }}</p>
+      <p>terrain: {{ item.terrain }}</p>
     </DynamicCard>
   </section>
 </template>

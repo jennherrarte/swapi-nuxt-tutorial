@@ -9,7 +9,11 @@
         {{ item.name }}
       </h2>
 
-      StarWars specific data...
+      <p>Name: {{ item.name }}</p>
+      <p>Model: {{ item.model }}</p>
+      <p>Starship Class: {{ item.starship_class }}</p>
+      <p>Hyperdrive Rating: {{ item.hyperdrive_rating }}</p>
+      <p>Cargo Capacity: {{ item.cargo_capacity }}</p>
     </DynamicCard>
   </section>
 </template>
