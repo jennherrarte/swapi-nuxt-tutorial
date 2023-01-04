@@ -29,7 +29,7 @@ body {
     justify-content: center;
     text-align: center;
     align-items: center;
-     /* height: 95vh; */
+    /* height: 95vh; */
     background-color: #f7efd8;
     padding: 10px;
 }

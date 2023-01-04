@@ -4,10 +4,7 @@
       {{ title }}
     </h1>
 
-    <div
-      v-for="(item, itemIndex) in items"
-      :key="itemIndex"
-    >
+    <div v-for="(item, itemIndex) in items" :key="itemIndex">
       <slot :item="item"></slot>
     </div>
   </div>

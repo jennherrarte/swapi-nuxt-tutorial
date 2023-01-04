@@ -40,10 +40,6 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-
-// body {
-
-// }
 .grid {
   display: flex;
   flex-direction: row;
