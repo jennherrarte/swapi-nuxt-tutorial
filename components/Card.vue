@@ -1,7 +1,8 @@
-<!-- Please remove this file from your project -->
 <template>
   <section>
-    <div v-for="(starship, index) in starships" :key="index">
+    <h2>test</h2>
+    <StarshipsCard cardType="StarshipsCard"/>
+    <!-- <div v-for="(starship, index) in starships" :key="index">
       <h1 class="starships">starships</h1>
       <p>Name: {{ starship.name }}</p>
       <p>Model: {{ starship.model }}</p>
@@ -9,7 +10,7 @@
       <p>Hyperdrive Rating: {{ starship.hyperdrive_rating }}</p>
       <p>Cargo Capacity: {{ starship.cargo_capacity }}</p>
       <button @click="addFavoriteStarship(index)">Favorite</button>
-    </div>
+    </div> -->
     <div v-for="(film, index) in films" :key="index">
       <h1 class="films">films</h1>
       <p>title: {{ film.title }}</p>
@@ -32,12 +33,17 @@
 </template>
 
 <script>
+import Starships from '../pages/Starships.vue'
+import StarshipsCard from '../components/sub/StarshipsCard.vue'
+
 export default {
+  components: { Starships, StarshipsCard },
   data() {
     return {
       favorite_starships: [],
       favorite_films: [],
-      favorite_planets: []
+      favorite_planets: [],
+      cardType: null
     }
   },
   props: {

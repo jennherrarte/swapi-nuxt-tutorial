@@ -3,18 +3,20 @@
   <section>
     <Header />
     <NavBar />
-    <Card :starships="starships" />
+    <Card :is="cardType"/>
 </section>
 </template>
 
 <script>
 import NavBar from '.././components/NavBar.vue';
 import Header from '.././components/Header.vue';
+import StarshipsCard from '../components/sub/StarshipsCard.vue'
 
 export default {
   data() {
     return {
-      starships: [] 
+      starships: [], 
+      cardType: StarshipsCard
     }
   },
   mounted() {
